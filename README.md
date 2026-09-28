@@ -1,5 +1,7 @@
 # ZhuaTech CVQC
 
+[简体中文](README.md) | [English](README.en.md)
+
 ## 工业视觉质检与模型运营平台 · 社区源码版
 
 ZhuaTech CVQC 是知华科技（上海如静知华信息科技有限公司）面向制造企业打造的视觉质量平台，连接工业相机、边缘推理、缺陷复核、质量追溯和模型持续改进。[访问知华科技官网](https://www.zhuatech.cn/)
