@@ -1,0 +1,102 @@
+{
+  "slug": "cvqc",
+  "title": "视觉质检漏放损失与复检预算",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "inspected",
+      "label": "已检查件数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    },
+    {
+      "key": "falseAccept",
+      "label": "缺陷误放件",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "falseReject",
+      "label": "良品误拒件",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "escapeCost",
+      "label": "单件误放成本",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "recheckCost",
+      "label": "单件误拒复检成本",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "lossBudget",
+      "label": "允许错误损失预算",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "escapeLimit",
+      "label": "最多漏放件",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "estimatedErrorCost",
+      "label": "预计错误处置元"
+    },
+    {
+      "key": "escapePerMillion",
+      "label": "每百万件误放"
+    },
+    {
+      "key": "totalErrors",
+      "label": "总错误件"
+    }
+  ],
+  "description": "按人工复核标注的误放、误拒及对应处置成本核算错误损失，并检查缺陷漏放门槛。不运行视觉模型，不把统计成本当安全放行依据。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "inspected": "1000",
+        "falseAccept": "2",
+        "falseReject": "10",
+        "escapeCost": "500",
+        "recheckCost": "10",
+        "lossBudget": "1500",
+        "escapeLimit": "1"
+      }
+    ]
+  }
+}

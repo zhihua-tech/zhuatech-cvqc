@@ -16,6 +16,12 @@ This repository is intended for learning, technical evaluation, and non-commerci
 
 **Search topics:** enterprise computer vision quality control, self-hosted computer vision quality control, Java Spring Boot enterprise software, digital transformation.
 
+
+## Update: Visual QC escape loss and reinspection budget
+
+This release adds an authenticated, structured batch workspace at `/operations.html`, backed by project-specific deterministic calculations, explicit validation, explainable decisions, and CSV/JSON exports. Decimal values are preserved exactly; no external model call is made.
+
+Results are **read-only decision support**, not approvals or posted transactions. The feature does not send payments, sign contracts, destroy records, or control devices, and does not certify the whole application for production. See [the calculation contract and API guide](docs/OPERATIONS-REVIEW.md).
 ## Enterprise Use
 
 - **Primary users:** Manufacturing planners, production teams, quality teams, and plant managers.

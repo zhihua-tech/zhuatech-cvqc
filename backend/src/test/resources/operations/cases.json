@@ -1,0 +1,64 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "HOLD",
+      "estimatedErrorCost": "#1100",
+      "escapePerMillion": "#2000"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "escapeLimit": "2"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "falseAccept": "0",
+      "falseReject": "0"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "falseReject": "999"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "escapeLimit": "2",
+      "lossBudget": "1099.99"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "inspected": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "falseAccept": "1"
+    },
+    "expected": {
+      "decision": "REVIEW",
+      "estimatedErrorCost": "#600"
+    },
+    "error": false
+  }
+]
